@@ -8,7 +8,7 @@
         :root { --gold: #d4af37; --dark: #0a0a0a; --card: #161616; --text: #e0e0e0; --accent: #b22222; }
         body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--dark); color: var(--text); line-height: 1.6; }
         
-        /* ПЛАВАЮЩИЕ КНОПКИ */
+        /* КНОПКИ СБОКУ */
         .side-panel {
             position: fixed;
             top: 20px;
@@ -23,7 +23,7 @@
             display: flex; align-items: center; justify-content: center;
             box-shadow: 0 4px 15px rgba(0,0,0,0.6); transition: 0.3s;
             cursor: pointer; border: 2px solid rgba(255,255,255,0.1);
-            text-decoration: none; padding: 0;
+            text-decoration: none;
         }
         .float-wa { background: #25d366; }
         .float-jivo { background: #007bff; border: none; }
@@ -34,8 +34,81 @@
             background-size: cover; padding: 40px 20px; text-align: center; border-bottom: 3px solid var(--gold);
         }
 
-        .container { width: 95%; max-width: 1100px; margin: auto; padding: 10px 0; }
+        .container { width: 95%; max-width: 1100px; margin: auto; padding: 15px 0; }
         .badge { background: var(--gold); color: #000; padding: 5px 15px; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; border-radius: 3px; }
-        h1 { font-size: 2.2rem; color: var(--gold); margin: 10px 0; text-transform: uppercase; }
+        h1 { font-size: 2.2rem; color: var(--gold); margin: 10px 0; text-transform: uppercase; letter-spacing: 2px; }
         
-        .promo-banner { background: var(--accent); color: white; padding:
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-bottom: 20px; }
+        .section-card { background: var(--card); border: 1px solid #333; padding: 15px; border-radius: 10px; }
+        .section-card h3 { color: var(--gold); border-bottom: 1px solid #444; margin-top: 0; padding-bottom: 5px; }
+        
+        /* КАРТОЧКА МЕНЕДЖЕРА */
+        .manager-card { 
+            background: linear-gradient(145deg, #1a1a1a, #000); border: 2px solid var(--gold); 
+            padding: 30px; text-align: center; margin: 20px 0; border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+        .contact-btn { 
+            display: flex; align-items: center; justify-content: center;
+            width: 100%; max-width: 320px; margin: 12px auto; 
+            padding: 15px; border-radius: 35px; text-decoration: none; 
+            font-weight: bold; border: none; cursor: pointer; font-size: 1.1rem;
+        }
+        .c-call { background: #ffffff; color: black; }
+        .c-wa { background: #25d366; color: white; }
+        .c-jivo { background: var(--gold); color: black; }
+        .c-tg { background: #0088cc; color: white; }
+    </style>
+    <script src="https://code.jivosite.com/widget/S7z82mG7rT" async></script>
+</head>
+<body>
+
+<div class="side-panel">
+    <a href="https://wa.me/79900332044" class="float-btn float-wa">
+        <svg class="icon-svg" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.484 8.412-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.499-5.688-1.447l-6.309 1.656zm6.223-3.081c1.517.898 3.033 1.411 4.757 1.412 5.384 0 9.763-4.379 9.765-9.763.001-2.61-1.015-5.061-2.862-6.908s-4.301-2.863-6.91-2.863c-5.385 0-9.764 4.379-9.767 9.763-.001 1.761.503 3.315 1.455 4.801l-1.01 3.689 3.577-.931z"/></svg>
+    </a>
+    <div class="float-btn float-jivo" onclick="jivo_api.open();">
+        <svg class="icon-svg" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+    </div>
+</div>
+
+<header>
+    <div class="badge">Премиальный сервис</div>
+    <h1>ВЕЗДЕ ВЕЗЕМ</h1>
+</header>
+
+<div class="container">
+    <div class="grid">
+        <div class="section-card">
+            <h3>🌍 Направления</h3>
+            <p>Украина, Европа, Грузия, СНГ.</p>
+            <p><strong>⚠️ БЕЗ ЗАГРАНПАСПОРТА:</strong> РФ ↔️ Украина</p>
+        </div>
+        <div class="section-card">
+            <h3>🚀 Мокраны</h3>
+            <p>Маршрут через Беларусь. 25 000 руб. 1.5 суток в пути.</p>
+        </div>
+    </div>
+
+    <div class="manager-card">
+        <p style="color: var(--gold); font-size: 0.8rem; margin: 0;">ВАШ ПЕРСОНАЛЬНЫЙ КУРАТОР</p>
+        <h2 style="font-size: 2.5rem; margin: 5px 0;">СВЕТЛАНА</h2>
+        
+        <a href="tel:+79900332044" class="contact-btn c-call">📞 Позвонить</a>
+        <button onclick="jivo_api.open();" class="contact-btn c-jivo">💬 Написать в чат</button>
+        <a href="https://wa.me/79900332044" class="contact-btn c-wa">✅ WhatsApp</a>
+        <a href="https://t.me/Vezdevezem_svetlana" class="contact-btn c-tg">✈️ Telegram</a>
+
+        <div style="margin-top: 15px; border-top: 1px solid #333; padding-top: 15px; font-size: 0.9rem;">
+            🇺🇦 Украина: +380 89 430 51 62<br>
+            Оплата при посадке • Без предоплаты
+        </div>
+    </div>
+</div>
+
+<footer style="text-align: center; padding: 20px; font-size: 0.7rem; opacity: 0.5;">
+    &copy; 2026 ВЕЗДЕ ВЕЗЕМ.
+</footer>
+
+</body>
+</html>
