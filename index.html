@@ -38,11 +38,14 @@
         .badge { background: var(--gold); color: #000; padding: 5px 15px; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; border-radius: 3px; }
         h1 { font-size: 2.2rem; color: var(--gold); margin: 10px 0; text-transform: uppercase; letter-spacing: 2px; }
         
+        .promo-banner { background: var(--accent); color: white; padding: 12px; text-align: center; font-weight: bold; border-radius: 8px; margin-bottom: 15px; }
+
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-bottom: 20px; }
         .section-card { background: var(--card); border: 1px solid #333; padding: 15px; border-radius: 10px; }
         .section-card h3 { color: var(--gold); border-bottom: 1px solid #444; margin-top: 0; padding-bottom: 5px; }
+        ul { list-style: none; padding: 0; margin: 10px 0; }
+        li { padding: 4px 0; border-bottom: 1px solid #222; font-size: 0.9rem; }
         
-        /* КАРТОЧКА МЕНЕДЖЕРА */
         .manager-card { 
             background: linear-gradient(145deg, #1a1a1a, #000); border: 2px solid var(--gold); 
             padding: 30px; text-align: center; margin: 20px 0; border-radius: 15px;
@@ -58,6 +61,7 @@
         .c-wa { background: #25d366; color: white; }
         .c-jivo { background: var(--gold); color: black; }
         .c-tg { background: #0088cc; color: white; }
+        .tag { background: #333; padding: 3px 7px; border-radius: 4px; font-size: 0.8rem; margin: 2px; display: inline-block; }
     </style>
     <script src="https://code.jivosite.com/widget/S7z82mG7rT" async></script>
 </head>
@@ -78,15 +82,21 @@
 </header>
 
 <div class="container">
+    <div class="promo-banner">🔥 НАШЛИ ДЕШЕВЛЕ? ОТВЕЗЁМ ЕЩЁ ДЕШЕВЛЕ!</div>
+
     <div class="grid">
         <div class="section-card">
             <h3>🌍 Направления</h3>
-            <p>Украина, Европа, Грузия, СНГ.</p>
-            <p><strong>⚠️ БЕЗ ЗАГРАНПАСПОРТА:</strong> РФ ↔️ Украина</p>
+            <ul>
+                <li><strong>УКРАИНА:</strong> Киев, Харьков, Днепр и др.</li>
+                <li><strong>ЕВРОПА:</strong> Германия, Польша, Чехия.</li>
+                <li><strong>ПРИБАЛТИКА:</strong> Латвия, Литва, Эстония.</li>
+            </ul>
         </div>
         <div class="section-card">
-            <h3>🚀 Мокраны</h3>
-            <p>Маршрут через Беларусь. 25 000 руб. 1.5 суток в пути.</p>
+            <h3>🚀 Мокраны - 25 000 р.</h3>
+            <p>Маршрут через Беларусь. 1.5 суток. Помощь волонтеров.</p>
+            <div class="tag">Без загранпаспорта</div>
         </div>
     </div>
 
@@ -95,13 +105,13 @@
         <h2 style="font-size: 2.5rem; margin: 5px 0;">СВЕТЛАНА</h2>
         
         <a href="tel:+79900332044" class="contact-btn c-call">📞 Позвонить</a>
-        <button onclick="jivo_api.open();" class="contact-btn c-jivo">💬 Написать в чат</button>
+        <button onclick="jivo_api.open();" class="contact-btn c-jivo">💬 Онлайн-чат</button>
         <a href="https://wa.me/79900332044" class="contact-btn c-wa">✅ WhatsApp</a>
         <a href="https://t.me/Vezdevezem_svetlana" class="contact-btn c-tg">✈️ Telegram</a>
 
         <div style="margin-top: 15px; border-top: 1px solid #333; padding-top: 15px; font-size: 0.9rem;">
             🇺🇦 Украина: +380 89 430 51 62<br>
-            Оплата при посадке • Без предоплаты
+            Оплата при посадке • Ежедневно
         </div>
     </div>
 </div>
