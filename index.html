@@ -10,4 +10,43 @@
         .header { background: #ffffff; padding: 40px 20px; text-align: center; border-bottom: 3px solid #0056b3; }
         .logo { font-size: 2.2rem; font-weight: 800; color: #0056b3; letter-spacing: 2px; text-transform: uppercase; margin: 0; }
         .container { max-width: 450px; margin: 30px auto; background: white; padding: 25px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); text-align: center; }
-        .status { display: inline-block; background: #e8f5e9; color: #2e7d32; padding: 5px 15px; border-radius: 20px; font-size:
+        .status { display: inline-block; background: #e8f5e9; color: #2e7d32; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: bold; margin-bottom: 20px; }
+        .services { text-align: left; margin: 20px 0; padding: 0; list-style: none; }
+        .services li { padding: 8px 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center; }
+        .services li::before { content: "🚢"; margin-right: 10px; }
+        .btn { display: block; padding: 18px; margin: 12px 0; border-radius: 12px; text-decoration: none; font-weight: bold; color: white; border: none; font-size: 1.1rem; cursor: pointer; width: 100%; transition: 0.3s; text-align: center; }
+        .btn-jivo { background: #0056b3; box-shadow: 0 4px 14px rgba(0,86,179,0.3); }
+        .btn-wa { background: #25D366; box-shadow: 0 4px 14px rgba(37,211,102,0.3); }
+        .footer { font-size: 0.8rem; color: #aaa; margin-top: 20px; }
+    </style>
+    <script src="https://code.jivosite.com/widget/S7z82mG7rT" async></script>
+</head>
+<body>
+    <div class="top-bar"></div>
+    <div class="header">
+        <h1 class="logo">ВЕЗДЕ ВЕЗЕМ</h1>
+        <div style="color: #666; margin-top: 5px;">Международная логистика</div>
+    </div>
+    <div class="container">
+        <div class="status">● Светлана на связи</div>
+        <p style="font-size: 1.1rem; font-weight: 500;">Рассчитаем ваш маршрут за 5 минут</p>
+        <ul class="services">
+            <li>Европа, Прибалтика, СНГ</li>
+            <li>Пассажирские трансферы</li>
+            <li>Перевозка личных вещей</li>
+            <li>Доставка посылок «дверь-дверь»</li>
+        </ul>
+        
+        <button class="btn btn-jivo" onclick="if(typeof jivo_api !== 'undefined'){jivo_api.open();}else{alert('Чат загружается, одну секунду...');}">
+            Написать менеджеру
+        </button>
+
+        <a href="https://wa.me/79900332044" class="btn btn-wa">Написать в WhatsApp</a>
+        
+        <div class="footer">
+            © 2026 vezdevezem.com<br>
+            +7 (990) 033-20-44
+        </div>
+    </div>
+</body>
+</html>
