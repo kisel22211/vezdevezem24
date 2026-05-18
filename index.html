@@ -5,58 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Везде Везем</title>
     <style>
-        html, body { margin: 0; padding: 0; width: 100%; min-height: 100%; background: #000; color: #fff; font-family: sans-serif; -webkit-tap-highlight-color: transparent; }
+        html, body { margin: 0; padding: 0; width: 100%; min-height: 100%; background: #000; color: #fff; font-family: sans-serif; }
         .header { background: #0a0a0a; padding: 30px 10px; text-align: center; border-bottom: 2px solid #d4af37; }
         .gold { color: #d4af37; }
         .content { padding: 15px; max-width: 500px; margin: 0 auto; }
         .info-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
         .info-box { background: #111; border: 1px solid #333; padding: 15px; border-radius: 12px; font-size: 14px; text-align: center; }
         .card { background: #080808; border: 2px solid #d4af37; border-radius: 20px; padding: 30px 20px; text-align: center; }
-        .btn { display: block; padding: 18px 0; margin: 15px 0; border-radius: 40px; text-decoration: none; font-weight: bold; font-size: 18px; border: none; cursor: pointer; transition: 0.2s; text-align: center; width: 100%; }
-        .btn:active { transform: scale(0.98); opacity: 0.8; }
+        .btn { display: block; padding: 18px 0; margin: 15px 0; border-radius: 40px; text-decoration: none; font-weight: bold; font-size: 18px; border: none; cursor: pointer; text-align: center; color: #fff; }
         .btn-call { background: #fff; color: #000; }
-        .btn-jivo { background: #d4af37; color: #000; box-shadow: 0 0 15px rgba(212,175,55,0.3); }
-        .btn-wa { background: #25d366; color: #fff; }
-        .btn-tg { background: #0088cc; color: #fff; }
-        .side-btns { position: fixed; top: 15px; right: 15px; z-index: 1000; }
-        .circle { width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); border: none; cursor: pointer; }
+        .btn-tg-main { background: #d4af37; color: #000; box-shadow: 0 0 15px rgba(212,175,55,0.4); }
+        .btn-wa { background: #25d366; }
+        .btn-tg { background: #0088cc; }
     </style>
-    
-    <script src="https://code.jivosite.com/widget/S7z82mG7rT" async></script>
-
-    <script>
-        // УЛЬТРА-ФУНКЦИЯ ДЛЯ ОТКРЫТИЯ ЧАТА
-        function forceOpenJivo() {
-            // Способ 1: Прямой вызов через API
-            if (window.jivo_api && window.jivo_api.open) {
-                window.jivo_api.open();
-                return;
-            }
-            // Способ 2: Вызов через глобальный объект Jivo
-            if (window.Jivo && window.Jivo.open) {
-                window.Jivo.open();
-                return;
-            }
-            // Способ 3: Имитация нажатия на синий кружок (если он есть)
-            var jivoNode = document.querySelector('jdiv') || document.querySelector('.jivo-iframe-container');
-            if (jivoNode) {
-                alert("Чат почти загружен, нажимаю за вас...");
-            } else {
-                alert("Чат загружается (3-5 сек). Попробуйте нажать еще раз через мгновение!");
-            }
-        }
-    </script>
 </head>
 <body>
-
-<div class="side-btns">
-    <a href="https://wa.me/79900332044" class="circle" style="background: #25d366;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="30">
-    </a>
-    <div class="circle" style="background: #007bff;" onclick="forceOpenJivo();">
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
-    </div>
-</div>
 
 <div class="header">
     <h1 class="gold" style="margin: 0; font-size: 32px; letter-spacing: 2px; font-weight: 800;">ВЕЗДЕ ВЕЗЕМ</h1>
@@ -71,24 +34,20 @@
 
     <div class="card">
         <p class="gold" style="font-size: 12px; letter-spacing: 1px; margin: 0; font-weight: bold;">ВАШ ПЕРСОНАЛЬНЫЙ КУРАТОР</p>
-        <h2 style="font-size: 42px; margin: 10px 0; font-weight: 900; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">СВЕТЛАНА</h2>
+        <h2 style="font-size: 42px; margin: 10px 0; font-weight: 900;">СВЕТЛАНА</h2>
         
         <a href="tel:+79900332044" class="btn btn-call">📞 Позвонить</a>
         
-        <div class="btn btn-jivo" onclick="forceOpenJivo();">💬 Написать в Чат</div>
+        <a href="https://t.me/Vezdevezem_svetlana" class="btn btn-tg-main">💬 Написать в Чат (TG)</a>
         
         <a href="https://wa.me/79900332044" class="btn btn-wa">✅ WhatsApp</a>
-        <a href="https://t.me/Vezdevezem_svetlana" class="btn btn-tg">✈️ Telegram</a>
+        <a href="https://t.me/Vezdevezem_svetlana" class="btn btn-tg">✈️ Telegram Канал</a>
 
         <div style="margin-top: 25px; font-size: 16px; opacity: 0.9; border-top: 1px solid #333; padding-top: 15px;">
             🇺🇦 Украина: <b>+380 89 430 51 62</b>
         </div>
     </div>
 </div>
-
-<footer style="padding: 30px; opacity: 0.3; font-size: 12px; text-align: center;">
-    © 2026 VEZDEVEZEM.COM
-</footer>
 
 </body>
 </html>
