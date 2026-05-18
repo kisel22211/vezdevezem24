@@ -5,66 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Везде Везем — Перевозки</title>
     <style>
-        body { font-family: sans-serif; margin: 0; background: #0a0a0a; color: #e0e0e0; text-align: center; }
-        header { padding: 30px 20px; border-bottom: 2px solid #d4af37; background: #111; }
-        .gold { color: #d4af37; }
-        .container { padding: 20px; max-width: 500px; margin: auto; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background: #0a0a0a; color: #e0e0e0; text-align: center; }
+        .gold-text { color: #d4af37; }
+        header { padding: 30px 15px; border-bottom: 2px solid #d4af37; background: #111; }
         
-        /* КНОПКИ СБОКУ */
-        .side-btns { position: fixed; top: 20px; right: 15px; z-index: 9999; }
-        .round { width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.5); border: none; }
-        .wa-bg { background: #25d366; }
-        .jivo-bg { background: #007bff; }
+        /* ФИКСИРОВАННЫЕ КНОПКИ */
+        .side-container { position: fixed; top: 20px; right: 15px; z-index: 9999; display: flex; flex-direction: column; gap: 10px; }
+        .circle-btn { width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: none; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.5); transition: 0.2s; }
+        .circle-btn:active { transform: scale(0.9); }
+        .bg-wa { background: #25d366; }
+        .bg-jivo { background: #007bff; }
+
+        /* ОСНОВНОЙ КОНТЕНТ */
+        .main { padding: 20px; max-width: 500px; margin: auto; }
+        .info-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+        .info-card { background: #1c1c1c; padding: 12px; border-radius: 12px; font-size: 14px; border: 1px solid #333; }
         
-        /* КАРТОЧКА */
-        .card { background: #161616; border: 2px solid #d4af37; border-radius: 20px; padding: 25px; margin-top: 20px; }
-        .btn { display: block; padding: 15px; margin: 12px 0; border-radius: 30px; text-decoration: none; font-weight: bold; color: #fff; border: none; cursor: pointer; font-size: 16px; }
-        .b-call { background: #fff; color: #000; }
-        .b-wa { background: #25d366; }
-        .b-jivo { background: #d4af37; color: #000; }
-        .b-tg { background: #0088cc; }
+        .manager-box { background: #161616; border: 2px solid #d4af37; border-radius: 20px; padding: 25px; position: relative; box-shadow: 0 10px 30px rgba(212,175,55,0.1); }
+        .action-btn { display: flex; align-items: center; justify-content: center; padding: 16px; margin: 12px 0; border-radius: 35px; text-decoration: none; font-weight: bold; font-size: 17px; border: none; cursor: pointer; color: #fff; width: 100%; }
         
-        .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
-        .info-box { background: #222; padding: 10px; border-radius: 10px; font-size: 13px; }
+        .btn-phone { background: #fff; color: #000; }
+        .btn-jivo { background: #d4af37; color: #000; }
+        .btn-wa { background: #25d366; }
+        .btn-tg { background: #0088cc; }
     </style>
     <script src="https://code.jivosite.com/widget/S7z82mG7rT" async></script>
 </head>
 <body>
 
-<div class="side-btns">
-    <a href="https://wa.me/79900332044" class="round wa-bg">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="30">
+<div class="side-container">
+    <a href="https://wa.me/79900332044" class="circle-btn bg-wa">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="30" alt="WA">
     </a>
-    <div class="round jivo-bg" onclick="jivo_api.open();">
-        <img src="https://admin.jivosite.com/images/jivo-logo.png" width="30" style="filter: brightness(0) invert(1);">
+    <div class="circle-btn bg-jivo" onclick="try{jivo_api.open()}catch(e){console.log('Загрузка чата...')}">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
     </div>
 </div>
 
 <header>
-    <h1 class="gold">ВЕЗДЕ ВЕЗЕМ</h1>
-    <p>Ежедневные рейсы • Без предоплаты</p>
+    <h1 class="gold-text" style="margin: 0; font-size: 32px; letter-spacing: 2px;">ВЕЗДЕ ВЕЗЕМ</h1>
+    <p style="margin: 10px 0 0; opacity: 0.8;">Ежедневные рейсы • Без предоплаты</p>
 </header>
 
-<div class="container">
-    <div class="info-grid">
-        <div class="info-box">🌍 <b>Направления:</b><br>Украина, Европа, Грузия</div>
-        <div class="info-box">🚀 <b>Мокраны:</b><br>25 000 руб. Быстро</div>
+<div class="main">
+    <div class="info-row">
+        <div class="info-card">🌍 <b>Направления:</b><br>Украина, Европа, Грузия</div>
+        <div class="info-card">🚀 <b>Мокраны:</b><br>25 000 руб. Быстро</div>
     </div>
 
-    <div class="card">
-        <p class="gold" style="font-size: 12px; margin: 0;">ВАШ КУРАТОР</p>
-        <h2 style="font-size: 35px; margin: 10px 0;">СВЕТЛАНА</h2>
+    <div class="manager-box">
+        <p class="gold-text" style="font-size: 12px; margin: 0; letter-spacing: 1px;">ВАШ ПЕРСОНАЛЬНЫЙ КУРАТОР</p>
+        <h2 style="font-size: 40px; margin: 10px 0; color: #fff;">СВЕТЛАНА</h2>
         
-        <a href="tel:+79900332044" class="btn b-call">📞 Позвонить</a>
-        <button onclick="jivo_api.open();" class="btn b-jivo">💬 Написать в Чат</button>
-        <a href="https://wa.me/79900332044" class="btn b-wa">✅ WhatsApp</a>
-        <a href="https://t.me/Vezdevezem_svetlana" class="btn b-tg">✈️ Telegram</a>
+        <a href="tel:+79900332044" class="action-btn btn-phone">📞 Позвонить</a>
+        <button onclick="try{jivo_api.open()}catch(e){alert('Чат загружается, попробуйте через 3 секунды')}" class="action-btn btn-jivo">💬 Написать в Чат</button>
+        <a href="https://wa.me/79900332044" class="action-btn btn-wa">✅ WhatsApp</a>
+        <a href="https://t.me/Vezdevezem_svetlana" class="action-btn btn-tg">✈️ Telegram</a>
 
-        <p style="font-size: 14px; margin-top: 20px; opacity: 0.8;">
-            Украина: +380 89 430 51 62
-        </p>
-    </div>
-</div>
-
-</body>
-</html>
+        
