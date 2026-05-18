@@ -8,7 +8,7 @@
         :root { --gold: #d4af37; --dark: #0a0a0a; --card: #161616; --text: #e0e0e0; --accent: #b22222; }
         body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--dark); color: var(--text); line-height: 1.6; }
         
-        /* СТИЛИ ОНЛАЙН ЧАТА (Вверху справа) */
+        /* Кнопки мессенджеров сверху */
         .online-chat {
             position: fixed;
             top: 15px;
@@ -29,7 +29,6 @@
             transition: 0.3s;
             border: 1px solid rgba(255,255,255,0.2);
         }
-        .chat-btn:hover { transform: scale(1.1); }
         .chat-wa { background: #25d366; }
         .chat-tg { background: #0088cc; }
         .chat-icon { width: 28px; height: 28px; fill: white; }
@@ -61,8 +60,8 @@
         }
         .wa { background: #25d366; color: white; }
         .tg { background: #0088cc; color: white; }
-        .jivo-btn { background: #28a745; color: white; }
-        .call { background: var(--gold); color: black; font-size: 1.2rem; }
+        .jivo-btn { background: var(--gold); color: black; }
+        .call { background: #ffffff; color: black; font-size: 1.2rem; }
         .hot-price { color: #ff4500; font-weight: bold; font-size: 1.2rem; }
         .tag { background: #333; padding: 2px 7px; border-radius: 4px; font-size: 0.8rem; margin: 2px; display: inline-block; }
     </style>
@@ -71,5 +70,74 @@
 <body>
 
 <div class="online-chat">
-    <a href="https://wa.me/79900332044" class="chat-btn chat-wa" title="Написать в WhatsApp">
-        <svg class="chat-icon" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.484 8.412-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.499-5.688-1.447l-6.309 1.656zm6.223-3.081c1.517.898 3.033 1.411 4.757 1.412 5.384 0 9.763-4.379 9.765-9.763.001-2.61-1.015-5.061-2.862-6.908s-4.301-2.863-6.91-2.863c-5.385 0-9.764 4.379-9.767 9.763-.001 1.761.503 3.315 1.455 4.801l-1.01 3.689 3.577-.931z"/></svg
+    <a href="https://wa.me/79900332044" class="chat-btn chat-wa" title="WhatsApp">
+        <svg class="chat-icon" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.484 8.412-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.499-5.688-1.447l-6.309 1.656zm6.223-3.081c1.517.898 3.033 1.411 4.757 1.412 5.384 0 9.763-4.379 9.765-9.763.001-2.61-1.015-5.061-2.862-6.908s-4.301-2.863-6.91-2.863c-5.385 0-9.764 4.379-9.767 9.763-.001 1.761.503 3.315 1.455 4.801l-1.01 3.689 3.577-.931z"/></svg>
+    </a>
+</div>
+
+<header>
+    <div class="badge">Премиальный сервис</div>
+    <h1>ВЕЗДЕ ВЕЗЕМ</h1>
+    <p>Наземно 🚍 и с авиаперелетом 🛫 через Шереметьево</p>
+</header>
+
+<div class="container">
+    <div class="promo-banner">
+        🔥 НАШЛИ ДЕШЕВЛЕ? ОТВЕЗЁМ ЕЩЁ ДЕШЕВЛЕ! 🔥<br>
+        2 водителя • Можно с животными • Без предоплаты
+    </div>
+
+    <div class="grid">
+        <div class="section-card">
+            <h3>🌍 Все направления</h3>
+            <ul>
+                <li><strong>УКРАИНА:</strong> Сумы, Харьков, Полтава, Киев, Днепр, Запорожье</li>
+                <li><strong>ЕВРОПА:</strong> Германия, Австрия, Польша, Чехия, Нидерланды</li>
+                <li><strong>ГРУЗИЯ:</strong> Тбилиси, Батуми (Владикавказ / Керченский мост)</li>
+                <li><strong>ПРИБАЛТИКА:</strong> Латвия, Литва, Эстония</li>
+            </ul>
+        </div>
+
+        <div class="section-card">
+            <h3>🚀 Маршрут МОКРАНЫ</h3>
+            <p>Альтернатива Колотиловке! Через Беларусь (нужен паспорт РФ).</p>
+            <p class="hot-price">ВСЕГО 25 000 РУБ.</p>
+            <ul>
+                <li><strong>1.5 суток в пути</strong></li>
+                <li><strong>До 2 км пешком</strong> по асфальту</li>
+                <li>Встречают волонтеры, помощь до 10 800 грн</li>
+            </ul>
+        </div>
+
+        <div class="section-card">
+            <h3>📍 Регионы отправления</h3>
+            <p><strong>Херсонская и Запорожская обл:</strong></p>
+            <div>
+                <span class="tag">Мелитополь</span> <span class="tag">Бердянск</span> <span class="tag">Скадовск</span> 
+                <span class="tag">Каховка</span> <span class="tag">Мариуполь</span> <span class="tag">Донецк / ЛНР / ДНР</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="manager-card">
+        <p style="color: var(--gold); letter-spacing: 2px; font-size: 0.8rem;">ВАШ ПЕРСОНАЛЬНЫЙ КУРАТОР</p>
+        <h2 style="font-size: 2.2rem; margin: 5px 0;">СВЕТЛАНА</h2>
+        
+        <a href="tel:+79900332044" class="contact-btn call">📞 Позвонить: +7 990 033 20 44</a>
+        <button onclick="jivo_api.open();" class="contact-btn jivo-btn">💬 Написать в онлайн-чат</button>
+        <a href="https://wa.me/79900332044" class="contact-btn wa">💬 WhatsApp: +7 990 033 20 44</a>
+        <a href="https://t.me/Vezdevezem_svetlana" class="contact-btn tg">✈️ Telegram</a>
+
+        <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
+            <p>🇺🇦 Украина: <strong>+380 89 430 51 62</strong></p>
+            <p style="font-size: 0.8rem; opacity: 0.7;">Любой способ оплаты • Оплата при посадке</p>
+        </div>
+    </div>
+</div>
+
+<footer style="text-align: center; padding: 20px; font-size: 0.7rem; opacity: 0.5;">
+    &copy; 2026 ВЕЗДЕ ВЕЗЕМ. Выезды ежедневно. Скидки группам и детям!
+</footer>
+
+</body>
+</html>
