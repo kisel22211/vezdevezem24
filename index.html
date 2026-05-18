@@ -2,67 +2,72 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Везде Везем</title>
     <style>
-        body { font-family: sans-serif; margin: 0; background: #000; color: #fff; }
-        .header { padding: 30px 20px; text-align: center; border-bottom: 2px solid #d4af37; background: #0a0a0a; }
+        /* Базовые настройки, чтобы сайт был на весь экран */
+        html, body { margin: 0; padding: 0; width: 100%; min-height: 100%; background: #000; color: #fff; font-family: sans-serif; }
+        
+        .header { background: #0a0a0a; padding: 30px 10px; text-align: center; border-bottom: 2px solid #d4af37; }
         .gold { color: #d4af37; }
         
-        .container { padding: 15px; max-width: 600px; margin: auto; }
+        .content { padding: 15px; max-width: 500px; margin: 0 auto; }
         
-        /* ИНФО-БЛОКИ */
-        .info-row { display: flex; gap: 10px; margin-bottom: 20px; }
-        .info-card { flex: 1; background: #1a1a1a; padding: 15px; border-radius: 12px; border: 1px solid #333; font-size: 14px; text-align: center; }
+        /* Таблички с инфо */
+        .info-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+        .info-box { background: #111; border: 1px solid #333; padding: 15px; border-radius: 12px; font-size: 14px; text-align: center; }
 
-        /* КАРТОЧКА */
-        .manager-card { background: #0f0f0f; border: 1px solid #d4af37; border-radius: 20px; padding: 25px; text-align: center; box-shadow: 0 5px 20px rgba(212,175,55,0.1); }
+        /* Карточка Светланы */
+        .card { background: #080808; border: 2px solid #d4af37; border-radius: 20px; padding: 30px 20px; text-align: center; }
         
-        .btn { display: block; width: 100%; padding: 16px 0; margin: 12px 0; border-radius: 40px; text-decoration: none; font-weight: bold; font-size: 18px; border: none; cursor: pointer; }
+        /* Большие удобные кнопки */
+        .btn { display: block; padding: 18px 0; margin: 15px 0; border-radius: 40px; text-decoration: none; font-weight: bold; font-size: 18px; border: none; cursor: pointer; transition: 0.2s; }
+        .btn:active { opacity: 0.7; }
+        
         .btn-call { background: #fff; color: #000; }
         .btn-jivo { background: #d4af37; color: #000; }
         .btn-wa { background: #25d366; color: #fff; }
         .btn-tg { background: #0088cc; color: #fff; }
 
-        /* КНОПКИ В УГЛУ */
-        .fixed-btns { position: fixed; top: 15px; right: 15px; z-index: 1000; display: flex; flex-direction: column; gap: 10px; }
-        .circle { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.5); }
+        /* Плавающие кнопки справа */
+        .side-btns { position: fixed; top: 15px; right: 15px; z-index: 1000; }
+        .circle { width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); border: none; cursor: pointer; }
     </style>
     <script src="https://code.jivosite.com/widget/S7z82mG7rT" async></script>
 </head>
 <body>
 
-<div class="fixed-btns">
+<div class="side-btns">
     <a href="https://wa.me/79900332044" class="circle" style="background: #25d366;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="25">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="30">
     </a>
-    <div class="circle" style="background: #007bff; cursor: pointer;" onclick="jivo_api.open();">
-        <img src="https://admin.jivosite.com/images/jivo-logo.png" width="25" style="filter: brightness(0) invert(1);">
+    <div class="circle" style="background: #007bff;" onclick="jivo_api.open();">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
     </div>
 </div>
 
 <div class="header">
-    <h1 class="gold" style="margin: 0; font-size: 28px;">ВЕЗДЕ ВЕЗЕМ</h1>
-    <p style="margin: 5px 0 0; opacity: 0.7;">Ежедневные рейсы • Без предоплаты</p>
+    <h1 class="gold" style="margin: 0; font-size: 32px; letter-spacing: 2px;">ВЕЗДЕ ВЕЗЕМ</h1>
+    <p style="margin: 10px 0 0; opacity: 0.8;">Ежедневные рейсы • Без предоплаты</p>
 </div>
 
-<div class="container">
+<div class="content">
     <div class="info-row">
-        <div class="info-card">🌍 <b>Направления</b><br>Украина, Европа, Грузия</div>
-        <div class="info-card">🚀 <b>Мокраны</b><br>25 000 р. Быстро</div>
+        <div class="info-box">🌍 <b>Маршруты:</b><br>Украина, Европа, СНГ</div>
+        <div class="info-box">🚀 <b>Мокраны:</b><br>25 000 руб. Быстро</div>
     </div>
 
-    <div class="manager-card">
-        <p class="gold" style="font-size: 11px; letter-spacing: 1px; margin: 0;">ВАШ КУРАТОР</p>
-        <h2 style="font-size: 36px; margin: 10px 0;">СВЕТЛАНА</h2>
+    <div class="card">
+        <p class="gold" style="font-size: 12px; letter-spacing: 1px; margin: 0;">ВАШ ПЕРСОНАЛЬНЫЙ КУРАТОР</p>
+        <h2 style="font-size: 42px; margin: 10px 0; font-weight: 800;">СВЕТЛАНА</h2>
         
-        <a href="tel:+79900332044" class="btn btn-call">Позвонить</a>
-        <a href="javascript:void(0)" onclick="jivo_api.open();" class="btn btn-jivo">Написать в Чат</a>
+        <a href="tel:+79900332044" class="btn btn-call">📞 Позвонить</a>
+        <div class="btn btn-jivo" onclick="jivo_api.open();">💬 Написать в Чат</div>
         <a href="https://wa.me/79900332044" class="btn btn-wa">WhatsApp</a>
         <a href="https://t.me/Vezdevezem_svetlana" class="btn btn-tg">Telegram</a>
 
-        <p style="margin-top: 20px; font-size: 14px; opacity: 0.6;">
-            Украина: +380 89 430 51 62
+        <p style="margin-top: 25px; font-size: 16px; opacity: 0.8;">
+            Украина: <b>+380 89 430 51 62</b>
         </p>
     </div>
 </div>
