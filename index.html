@@ -5,35 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Везде Везем</title>
     <style>
-        /* Базовые настройки, чтобы сайт был на весь экран */
         html, body { margin: 0; padding: 0; width: 100%; min-height: 100%; background: #000; color: #fff; font-family: sans-serif; }
-        
         .header { background: #0a0a0a; padding: 30px 10px; text-align: center; border-bottom: 2px solid #d4af37; }
         .gold { color: #d4af37; }
-        
         .content { padding: 15px; max-width: 500px; margin: 0 auto; }
-        
-        /* Таблички с инфо */
         .info-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
         .info-box { background: #111; border: 1px solid #333; padding: 15px; border-radius: 12px; font-size: 14px; text-align: center; }
-
-        /* Карточка Светланы */
         .card { background: #080808; border: 2px solid #d4af37; border-radius: 20px; padding: 30px 20px; text-align: center; }
-        
-        /* Большие удобные кнопки */
-        .btn { display: block; padding: 18px 0; margin: 15px 0; border-radius: 40px; text-decoration: none; font-weight: bold; font-size: 18px; border: none; cursor: pointer; transition: 0.2s; }
+        .btn { display: block; padding: 18px 0; margin: 15px 0; border-radius: 40px; text-decoration: none; font-weight: bold; font-size: 18px; border: none; cursor: pointer; transition: 0.2s; text-align: center; }
         .btn:active { opacity: 0.7; }
-        
         .btn-call { background: #fff; color: #000; }
         .btn-jivo { background: #d4af37; color: #000; }
         .btn-wa { background: #25d366; color: #fff; }
         .btn-tg { background: #0088cc; color: #fff; }
-
-        /* Плавающие кнопки справа */
         .side-btns { position: fixed; top: 15px; right: 15px; z-index: 1000; }
         .circle { width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); border: none; cursor: pointer; }
     </style>
     <script src="https://code.jivosite.com/widget/S7z82mG7rT" async></script>
+    <script>
+        // Функция для принудительного открытия чата
+        function openJivo() {
+            if (typeof jivo_api !== 'undefined') {
+                jivo_api.open();
+            } else {
+                // Если чат еще не загрузился, пробуем еще раз через секунду
+                setTimeout(function() {
+                    if (typeof jivo_api !== 'undefined') jivo_api.open();
+                    else alert("Чат загружается, подождите секунду...");
+                }, 500);
+            }
+        }
+    </script>
 </head>
 <body>
 
@@ -41,7 +43,7 @@
     <a href="https://wa.me/79900332044" class="circle" style="background: #25d366;">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="30">
     </a>
-    <div class="circle" style="background: #007bff;" onclick="jivo_api.open();">
+    <div class="circle" style="background: #007bff;" onclick="openJivo();">
         <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
     </div>
 </div>
@@ -62,7 +64,7 @@
         <h2 style="font-size: 42px; margin: 10px 0; font-weight: 800;">СВЕТЛАНА</h2>
         
         <a href="tel:+79900332044" class="btn btn-call">📞 Позвонить</a>
-        <div class="btn btn-jivo" onclick="jivo_api.open();">💬 Написать в Чат</div>
+        <div class="btn btn-jivo" onclick="openJivo();">💬 Написать в Чат</div>
         <a href="https://wa.me/79900332044" class="btn btn-wa">WhatsApp</a>
         <a href="https://t.me/Vezdevezem_svetlana" class="btn btn-tg">Telegram</a>
 
