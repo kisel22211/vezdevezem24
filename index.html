@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Везде Везем | Премиальные пассажирские перевозки</title>
+    <title>Везде Везем | Пассажирские перевозки премиум-класса</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #fbfbfd;
+            background-color: #fafafa;
         }
         .serif-title {
             font-family: 'Playfair Display', serif;
@@ -21,304 +21,233 @@
         .premium-gradient {
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
         }
-        .accent-border {
-            border-image: linear-gradient(to right, #e2e8f0, #cbd5e1, #e2e8f0) 1;
-        }
     </style>
 </head>
 <body class="text-slate-800 antialiased selection:bg-amber-100">
 
-    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <div class="bg-slate-900 text-white w-10 h-10 rounded-xl flex items-center justify-center font-bold text-lg tracking-wider">ВВ</div>
-                <span class="text-xl font-bold tracking-tight text-slate-900">ВЕЗДЕ ВЕЗЕМ</span>
-            </div>
-            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
-                <a href="#routes" class="hover:text-slate-900 transition">Маршруты</a>
-                <a href="#advantages" class="hover:text-slate-900 transition">Преимущества</a>
-                <a href="#mokrany" class="hover:text-slate-900 transition">Новый маршрут</a>
-                <a href="#contacts" class="hover:text-slate-900 transition">Контакты</a>
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2.5">
+                <div class="bg-slate-900 text-white w-9 h-9 rounded-xl flex items-center justify-center font-bold text-base tracking-wider">ВВ</div>
+                <span class="text-lg font-bold tracking-tight text-slate-900">ВЕЗДЕ ВЕЗЕМ</span>
             </div>
             <div>
-                <a href="https://t.me/+79900746647" target="_blank" class="bg-slate-900 hover:bg-slate-800 text-white px-5 py-2.5 rounded-full text-sm font-medium tracking-wide transition-all shadow-sm flex items-center space-x-2">
-                    <i class="fab fa-telegram text-base"></i>
-                    <span>Написать Светлане</span>
+                <a href="https://t.me/+79900746647" target="_blank" class="bg-slate-900 hover:bg-slate-800 text-white px-4 py-2 rounded-full text-xs font-medium transition flex items-center space-x-1.5 shadow-sm">
+                    <i class="fab fa-telegram"></i>
+                    <span>Светлана</span>
                 </a>
             </div>
         </div>
     </nav>
 
-    <header class="relative overflow-hidden bg-gradient-to-b from-slate-50 to-white pt-16 pb-24 border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div class="lg:col-span-7 space-y-6">
-                <div class="inline-flex items-center space-x-2 bg-amber-50 border border-amber-200/60 rounded-full px-4 py-1 text-xs font-semibold text-amber-800 tracking-wide uppercase">
-                    <span class="flex h-2 w-2 rounded-full bg-amber-500 animate-pulse"></span>
-                    <span>Ежедневные рейсы без предоплаты</span>
-                </div>
-                <h1 class="serif-title text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-slate-900 leading-[1.15]">
-                    Пассажирские перевозки <br>
-                    <span class="italic font-medium text-amber-600">высшего класса</span>
-                </h1>
-                <p class="text-lg text-slate-500 max-w-xl font-light leading-relaxed">
-                    Надежные и комфортабельные рейсы связывают Украину, Россию, Европу и Грузию. Проверенные маршруты, индивидуальный подход и полная безопасность в пути.
-                </p>
-                
-                <div class="flex flex-wrap gap-2.5 pt-2">
-                    <span class="bg-white border border-slate-200 px-4 py-2 rounded-xl text-sm font-medium shadow-sm text-slate-700">В Украину</span>
-                    <span class="bg-white border border-slate-200 px-4 py-2 rounded-xl text-sm font-medium shadow-sm text-slate-700">В Россию</span>
-                    <span class="bg-white border border-slate-200 px-4 py-2 rounded-xl text-sm font-medium shadow-sm text-slate-700">В Польшу & Европу</span>
-                    <span class="bg-white border border-slate-200 px-4 py-2 rounded-xl text-sm font-medium shadow-sm text-slate-700">В Грузию</span>
-                </div>
-
-                <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                    <a href="#contacts" class="bg-slate-900 hover:bg-slate-800 text-white text-center px-8 py-4 rounded-2xl font-medium transition shadow-lg shadow-slate-900/10">
-                        Забронировать место
-                    </a>
-                    <a href="tel:+79900332044" class="bg-white hover:bg-slate-50 border border-slate-200 text-slate-800 text-center px-8 py-4 rounded-2xl font-medium transition flex items-center justify-center space-x-2">
-                        <i class="fa-solid fa-phone text-xs text-slate-400"></i>
-                        <span>Позвонить по РФ</span>
-                    </a>
-                </div>
+    <header class="bg-white pt-10 pb-12 border-b border-slate-100">
+        <div class="max-w-3xl mx-auto px-4 text-center space-y-6">
+            <div class="inline-flex items-center space-x-2 bg-amber-50 border border-amber-200/60 rounded-full px-3 py-1 text-[11px] font-medium text-amber-800 uppercase tracking-wider">
+                <span class="flex h-1.5 w-1.5 rounded-full bg-amber-500 animate-pulse"></span>
+                <span>Ежедневные рейсы • Без предоплаты</span>
             </div>
             
-            <div class="lg:col-span-5 bg-white border border-slate-200/80 p-8 rounded-3xl shadow-xl shadow-slate-200/50 space-y-6 relative">
-                <div class="absolute -top-3 -right-3 bg-amber-500 text-white font-bold text-xs px-3 py-1 rounded-lg uppercase tracking-wider shadow-md">Гарантия</div>
-                <h3 class="text-xl font-semibold text-slate-900">Нашли дешевле?</h3>
-                <p class="text-sm text-slate-500 leading-relaxed">
-                    Мы ценим наших клиентов. Если вы найдете аналогичный маршрут по более низкой стоимости — сообщите нам, и мы <strong>предложим вам цену еще выгоднее</strong>!
-                </p>
-                <div class="border-t border-slate-100 pt-5 grid grid-cols-3 gap-4 text-center">
-                    <div>
-                        <div class="text-xl font-bold text-slate-900">0%</div>
-                        <div class="text-[11px] text-slate-400 uppercase tracking-wider mt-1">Предоплаты</div>
-                    </div>
-                    <div>
-                        <div class="text-xl font-bold text-slate-900">2</div>
-                        <div class="text-[11px] text-slate-400 uppercase tracking-wider mt-1">Водителя</div>
-                    </div>
-                    <div>
-                        <div class="text-xl font-bold text-slate-900"><i class="fa-solid fa-dog text-sm"></i></div>
-                        <div class="text-[11px] text-slate-400 uppercase tracking-wider mt-1">Можно с животным</div>
-                    </div>
+            <h1 class="serif-title text-3xl sm:text-5xl font-normal tracking-tight text-slate-900 leading-tight">
+                Пассажирские перевозки <br>
+                <span class="italic font-medium text-amber-600">высшего класса</span>
+            </h1>
+            
+            <p class="text-sm sm:text-base text-slate-500 font-light leading-relaxed max-w-xl mx-auto">
+                Надежные, безопасные и комфортабельные рейсы из Херсонской и Запорожской областей. Проверенная логистика без лишних забот.
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-2 pt-2">
+                <span class="bg-slate-50 border border-slate-200/60 px-3 py-1.5 rounded-xl text-xs font-medium text-slate-700 flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>КПП Мокраны
+                </span>
+                <span class="bg-slate-50 border border-slate-200/60 px-3 py-1.5 rounded-xl text-xs font-medium text-slate-700 flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>Варшава / Европа
+                </span>
+                <span class="bg-slate-50 border border-slate-200/60 px-3 py-1.5 rounded-xl text-xs font-medium text-slate-700 flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>Украина
+                </span>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-3 pt-2 max-w-md mx-auto">
+                <a href="#contacts" class="bg-slate-900 hover:bg-slate-800 text-white text-center px-6 py-3.5 rounded-xl font-medium text-sm transition shadow-sm">
+                    Забронировать место
+                </a>
+                <a href="tel:+79900332044" class="bg-white hover:bg-slate-50 border border-slate-200 text-slate-800 text-center px-6 py-3.5 rounded-xl font-medium text-sm transition flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-phone text-xs text-slate-400"></i>
+                    <span>Позвонить по РФ</span>
+                </a>
+            </div>
+
+            <div class="pt-6 max-w-md mx-auto">
+                <div class="overflow-hidden rounded-2xl shadow-md border border-slate-200/80 aspect-[16/10] bg-slate-100">
+                    <img src="[attachment_0](attachment)" alt="Наш транспорт" class="w-full h-full object-cover">
                 </div>
+                <span class="text-[10px] text-slate-400 block mt-2 text-center">Современные минивэны и микроавтобусы с регулируемыми сиденьями и кондиционером</span>
             </div>
         </div>
     </header>
 
-    <section id="routes" class="py-24 max-w-7xl mx-auto px-6">
-        <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
-            <h2 class="serif-title text-3xl sm:text-4xl text-slate-900">Варианты и способы перемещения</h2>
-            <p class="text-slate-500 font-light">Гибкие логистические решения под любые документы и требования безопасности.</p>
+    <section class="py-12 max-w-3xl mx-auto px-4">
+        <div class="bg-amber-50/50 border border-amber-200/60 rounded-2xl p-6 text-center space-y-2 mb-8">
+            <h3 class="font-semibold text-amber-900 text-sm uppercase tracking-wider">Нашли дешевле? Отвезем еще дешевле!</h3>
+            <p class="text-xs text-amber-800 font-light leading-relaxed">
+                Мы гарантируем лучшую цену на рынке. Если вам предложат более низкую стоимость на аналогичный маршрут — просто сообщите нам, и мы снизим цену.
+            </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white border border-slate-200/70 p-8 rounded-3xl shadow-sm hover:shadow-md transition">
-                <div class="w-12 h-12 rounded-2xl bg-slate-50 flex items-center justify-center text-slate-700 mb-6 border border-slate-100">
-                    <i class="fa-solid fa-plane-up"></i>
-                </div>
-                <h3 class="text-lg font-semibold text-slate-900 mb-3">С авиаперелетом</h3>
-                <p class="text-sm text-slate-500 leading-relaxed mb-4">
-                    Организация рейсов через официальный авиационный хаб — <strong>Аэропорт Шереметьево</strong>. Идеально подходит для быстрого транзита.
-                </p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+            <div class="bg-white border border-slate-200/60 p-5 rounded-2xl shadow-sm">
+                <div class="text-slate-400 mb-2"><i class="fa-solid fa-wallet text-lg"></i></div>
+                <h4 class="text-xs font-semibold text-slate-900 uppercase tracking-wide mb-1">Без предоплаты</h4>
+                <p class="text-[11px] text-slate-500 font-light">Полный расчет наличными или переводом прямо при посадке</p>
             </div>
-
-            <div class="bg-white border border-slate-200/70 p-8 rounded-3xl shadow-sm hover:shadow-md transition">
-                <div class="w-12 h-12 rounded-2xl bg-slate-50 flex items-center justify-center text-slate-700 mb-6 border border-slate-100">
-                    <i class="fa-solid fa-bus"></i>
-                </div>
-                <h3 class="text-lg font-semibold text-slate-900 mb-3">Исключительно наземно</h3>
-                <p class="text-sm text-slate-500 leading-relaxed mb-4">
-                    Маршруты <strong>без использования самолетов</strong>. Проезд выполняется через надежные сухопутные коридоры Прибалтики или Беларуси.
-                </p>
+            <div class="bg-white border border-slate-200/60 p-5 rounded-2xl shadow-sm">
+                <div class="text-slate-400 mb-2"><i class="fa-solid fa-user-group text-lg"></i></div>
+                <h4 class="text-xs font-semibold text-slate-900 uppercase tracking-wide mb-1">2 Водителя</h4>
+                <p class="text-[11px] text-slate-500 font-light">Безопасность в пути, регулярная смена водителей на трассе</p>
             </div>
-
-            <div class="bg-white border border-slate-200/70 p-8 rounded-3xl shadow-sm hover:shadow-md transition">
-                <div class="w-12 h-12 rounded-2xl bg-slate-50 flex items-center justify-center text-slate-700 mb-6 border border-slate-100">
-                    <i class="fa-solid fa-id-card"></i>
-                </div>
-                <h3 class="text-lg font-semibold text-slate-900 mb-3">Двойное гражданство</h3>
-                <p class="text-sm text-slate-500 leading-relaxed mb-4">
-                    Специализированные и полностью легальные рейсы для пассажиров, обладающих одновременно <strong>паспортами Украины и РФ</strong>.
-                </p>
+            <div class="bg-white border border-slate-200/60 p-5 rounded-2xl shadow-sm">
+                <div class="text-slate-400 mb-2"><i class="fa-solid fa-paw text-lg"></i></div>
+                <h4 class="text-xs font-semibold text-slate-900 uppercase tracking-wide mb-1">С животными</h4>
+                <p class="text-[11px] text-slate-500 font-light">Бережно и без проблем перевозим ваших домашних питомцев</p>
             </div>
         </div>
     </section>
 
-    <section class="bg-slate-50 py-24 border-y border-slate-200/60">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-                
-                <div class="lg:col-span-4 space-y-4 lg:sticky lg:top-28">
-                    <h2 class="serif-title text-3xl sm:text-4xl text-slate-900">Обширная география рейсов</h2>
-                    <p class="text-sm text-slate-500 leading-relaxed">
-                        Мы забираем и доставляем пассажиров в ключевые города и регионы. Ежедневный контроль дорожной ситуации позволяет минимизировать время задержек.
-                    </p>
-                    <div class="bg-amber-50 border border-amber-200/50 p-4 rounded-2xl text-xs text-amber-900 font-medium flex items-start space-x-3">
-                        <i class="fa-solid fa-circle-exclamation mt-0.5 text-amber-600"></i>
-                        <span>На большинстве основных направлений отсутствует необходимость изнурительных пеших переходов границ. Поездка проходит максимально комфортно.</span>
+    <section class="bg-white py-12 border-y border-slate-100">
+        <div class="max-w-3xl mx-auto px-4 space-y-6">
+            <h2 class="serif-title text-2xl text-center text-slate-900">Варианты поездок под ваши документы</h2>
+            
+            <div class="space-y-3">
+                <div class="p-4 bg-slate-50 border border-slate-200/60 rounded-xl flex items-start space-x-3">
+                    <i class="fa-solid fa-bus text-slate-400 mt-1 text-sm"></i>
+                    <div>
+                        <h4 class="text-sm font-medium text-slate-900">Наземные маршруты (Без самолета)</h4>
+                        <p class="text-xs text-slate-500 font-light mt-0.5">Стабильный и спокойный проезд через Республику Беларусь.</p>
                     </div>
                 </div>
 
-                <div class="lg:col-span-8 space-y-6">
-                    <div class="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm space-y-4">
-                        <h3 class="font-semibold text-slate-900 flex items-center space-x-2 text-base">
-                            <span class="w-2 h-2 rounded-full bg-slate-900"></span>
-                            <span>Херсонская и Запорожская области</span>
-                        </h3>
-                        <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Города обслуживания:</p>
-                        <p class="text-sm text-slate-600 leading-relaxed font-light">
-                            Крым, Чонгар, Мелитополь, Бердянск, Приморск, Голая Пристань, Новая Каховка, Каховка, Лепетиха, Рогачик, Олешки, Скадовск, Каланчак, Кирилловка, Акимовка, Геническ, Новотроицк, Раденск, Михайловка, Лазурное.
-                        </p>
-                    </div>
-
-                    <div class="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm space-y-4">
-                        <h3 class="font-semibold text-slate-900 flex items-center space-x-2 text-base">
-                            <span class="w-2 h-2 rounded-full bg-slate-950"></span>
-                            <span>Транзит в Украину и Европу</span>
-                        </h3>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-600 font-light">
-                            <div>
-                                <strong class="font-medium text-slate-900 block mb-1">Города Украины:</strong>
-                                Сумы, Харьков, Полтава, Киев, Днепр, Запорожье, Одесса, Николаев, Львов и др.
-                            </div>
-                            <div>
-                                <strong class="font-medium text-slate-900 block mb-1">Страны Европы (ЕС):</strong>
-                                Германия 🇩🇪, Австрия 🇦🇹, Венгрия 🇭🇺, Чехия 🇨🇿, Словакия 🇸🇰, Нидерланды 🇳🇱 и др.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm space-y-4">
-                        <h3 class="font-semibold text-slate-900 flex items-center space-x-2 text-base">
-                            <span class="w-2 h-2 rounded-full bg-slate-900"></span>
-                            <span>Международные направления КПП</span>
-                        </h3>
-                        <ul class="text-sm text-slate-600 space-y-2 font-light">
-                            <li><strong class="font-medium text-slate-900">Латвия / Литва / Эстония:</strong> Резекне, Даугавпилс, Вильнюс, Каунас.</li>
-                            <li><strong class="font-medium text-slate-900">Польша:</strong> Варшава, Познань (через Новоазовск, РФ, Беларусь).</li>
-                            <li><strong class="font-medium text-slate-900">Грузия:</strong> Тбилиси, Батуми (через Владикавказ / Керченский мост).</li>
-                        </ul>
+                <div class="p-4 bg-slate-50 border border-slate-200/60 rounded-xl flex items-start space-x-3">
+                    <i class="fa-solid fa-plane text-slate-400 mt-1 text-sm"></i>
+                    <div>
+                        <h4 class="text-sm font-medium text-slate-900">С авиаперелетом (Шереметьево)</h4>
+                        <p class="text-xs text-slate-500 font-light mt-0.5">Организация быстрого и комфортного транзита через главный аэропорт.</p>
                     </div>
                 </div>
 
+                <div class="p-4 bg-slate-50 border border-slate-200/60 rounded-xl flex items-start space-x-3">
+                    <i class="fa-solid fa-passport text-slate-400 mt-1 text-sm"></i>
+                    <div>
+                        <h4 class="text-sm font-medium text-slate-900">Для двойного гражданства (Укр + Рос)</h4>
+                        <p class="text-xs text-slate-500 font-light mt-0.5">Специализированные и полностью проработанные легальные рейсы без загранпаспорта.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="mokrany" class="py-24 max-w-7xl mx-auto px-6">
-        <div class="premium-gradient text-white rounded-[2.5rem] p-8 sm:p-14 relative overflow-hidden shadow-2xl">
-            <div class="absolute -right-10 -bottom-10 opacity-10 text-[12rem] pointer-events-none">
-                <i class="fa-solid fa-route"></i>
+    <section class="py-12 max-w-3xl mx-auto px-4 space-y-6">
+        <h2 class="serif-title text-2xl text-center text-slate-900">География наших маршрутов</h2>
+        
+        <div class="space-y-4">
+            <div class="bg-white border border-slate-200 rounded-2xl p-5 space-y-2 shadow-sm">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">Регион отправления/прибытия</span>
+                <h3 class="text-sm font-semibold text-slate-900">Из Херсонской и Запорожской областей</h3>
+                <p class="text-xs text-slate-600 font-light leading-relaxed">
+                    Крым, Чонгар, Мелитополь, Бердянск, Приморск, Голая Пристань, Новая Каховка, Каховка, Лепетиха, Рогачик, Олешки, Скадовск, Каланчак, Кирилловка, Акимовка, Геническ, Новотроицк, Раденск, Михайловка, Лазурное.
+                </p>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-5 space-y-3 shadow-sm">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">Международные направления</span>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-600 font-light">
+                    <div>
+                        <strong class="font-medium text-slate-900 block mb-0.5">Города Украины:</strong>
+                        Сумы, Харьков, Полтава, Киев, Днепр, Запорожье, Одесса, Николаев, Львов и др.
+                    </div>
+                    <div>
+                        <strong class="font-medium text-slate-900 block mb-0.5">Страны Европы и ЕС:</strong>
+                        Германия, Австрия, Венгрия, Чехия, Словакия, Нидерланды, Латвия, Литва, Эстония, Польша.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-6 max-w-3xl mx-auto px-4">
+        <div class="premium-gradient text-white rounded-3xl p-6 sm:p-8 space-y-4 shadow-xl">
+            <span class="bg-amber-500 text-slate-950 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded">Новое направление</span>
+            <h2 class="serif-title text-xl sm:text-2xl font-normal text-white">Мокраны — Доманово (Волынская обл.)</h2>
+            
+            <p class="text-xs text-slate-300 font-light leading-relaxed">
+                Безопасный и удобный гуманитарный коридор через Беларусь. Отличная и легкая альтернатива Колатиловке. Поездка проходит по асфальтированной дороге, пеший переход составляет всего 1.5 км в дневное время.
+            </p>
+
+            <div class="border-t border-slate-700/60 pt-3 flex items-center justify-between">
+                <div>
+                    <span class="text-[10px] text-slate-400 block uppercase">Стоимость</span>
+                    <span class="text-lg font-semibold text-amber-400">25 000 руб.</span>
+                </div>
+                <div class="text-right">
+                    <span class="text-[10px] text-slate-400 block uppercase">В пути</span>
+                    <span class="text-xs font-light text-white">До 1.5 суток</span>
+                </div>
             </div>
             
-            <div class="max-w-3xl space-y-6 relative z-10">
-                <span class="bg-amber-500 text-slate-950 text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-md">Открыто новое направление</span>
-                <h2 class="serif-title text-3xl sm:text-5xl font-normal leading-tight">Мокраны — Доманово <br><span class="italic text-amber-400">Превосходная альтернатива Колатиловке</span></h2>
-                
-                <p class="text-slate-300 font-light text-base sm:text-lg leading-relaxed">
-                    Безопасный гуманитарный коридор через Беларусь в Волынскую область. Маршрут проходит по полностью асфальтированной и ровной дороге с минимальным пешим переходом всего 1.5 км.
-                </p>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-slate-700/60">
-                    <div class="space-y-2">
-                        <div class="text-sm text-slate-400">Стоимость проезда:</div>
-                        <div class="text-2xl font-semibold text-amber-400">25 000 руб.</div>
-                    </div>
-                    <div class="space-y-2">
-                        <div class="text-sm text-slate-400">Время в пути:</div>
-                        <div class="text-xl font-medium text-white">До 2 суток в дороге</div>
-                    </div>
-                </div>
-
-                <div class="bg-white/5 border border-white/10 p-5 rounded-2xl text-xs text-slate-300 space-y-2">
-                    <p class="flex items-center space-x-2">
-                        <i class="fa-solid fa-circle-check text-amber-400 text-xs"></i>
-                        <span>На границе обязательно потребуется наличие паспорта гражданина РФ.</span>
-                    </p>
-                    <p class="flex items-center space-x-2">
-                        <i class="fa-solid fa-circle-check text-amber-400 text-xs"></i>
-                        <span><strong>Помощь на стороне Украины:</strong> Встречают волонтеры, помогают с логистикой. Возможно оформление выплаты 10 800 грн.</span>
-                    </p>
-                    <p class="flex items-center space-x-2">
-                        <i class="fa-solid fa-clock text-amber-400 text-xs"></i>
-                        <span>Важно: ПП Мокраны работает исключительно в дневное время и только в пешем формате.</span>
-                    </p>
-                </div>
+            <div class="bg-white/5 p-3.5 rounded-xl text-[11px] text-slate-300 font-light space-y-1">
+                <p>• На границе можно ехать без загранпаспорта — по внутренним документам.</p>
+                <p>• После перехода вас встречают волонтеры и помогают с проездом по Украине.</p>
             </div>
         </div>
     </section>
 
-    <section id="contacts" class="bg-white py-24 border-t border-slate-100">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16">
-            
-            <div class="lg:col-span-5 space-y-6">
-                <h2 class="serif-title text-3xl sm:text-4xl text-slate-900">Свяжитесь с нами прямо сейчас</h2>
-                <p class="text-slate-500 font-light leading-relaxed">
-                    Менеджер Светлана ответит на все ваши вопросы, проконсультирует по необходимым документам для прохождения границ и закрепит за вами комфортное место.
-                </p>
-                
-                <div class="space-y-4 pt-4">
-                    <div class="p-4 bg-slate-50 rounded-2xl flex items-center space-x-4">
-                        <div class="w-10 h-10 bg-white rounded-xl border border-slate-200 flex items-center justify-center text-slate-600"><i class="fa-solid fa-phone"></i></div>
-                        <div>
-                            <div class="text-xs text-slate-400 font-medium">Для звонков по России:</div>
-                            <a href="tel:+79900332044" class="text-base font-semibold text-slate-900 hover:text-slate-700 transition">+7 (990) 033-20-44</a>
-                        </div>
-                    </div>
-                    
-                    <div class="p-4 bg-slate-50 rounded-2xl flex items-center space-x-4">
-                        <div class="w-10 h-10 bg-white rounded-xl border border-slate-200 flex items-center justify-center text-slate-600"><i class="fa-solid fa-phone"></i></div>
-                        <div>
-                            <div class="text-xs text-slate-400 font-medium">Для звонков из Украины:</div>
-                            <a href="tel:+380894305162" class="text-base font-semibold text-slate-900 hover:text-slate-700 transition">+380 (89) 430-51-62</a>
-                        </div>
-                    </div>
-
-                    <div class="p-4 bg-slate-50 rounded-2xl flex items-center space-x-4">
-                        <div class="w-10 h-10 bg-white rounded-xl border border-slate-200 flex items-center justify-center text-emerald-600"><i class="fa-brands fa-whatsapp"></i></div>
-                        <div>
-                            <div class="text-xs text-slate-400 font-medium">Мессенджеры (Светлана):</div>
-                            <a href="https://t.me/+79900746647" target="_blank" class="text-base font-semibold text-slate-900 hover:text-slate-700 transition">+7 (990) 074-66-47</a>
-                            <div class="text-[11px] text-slate-400">Telegram • WhatsApp • Viber</div>
-                        </div>
-                    </div>
-                </div>
+    <section id="contacts" class="bg-white py-12 border-t border-slate-100 mt-12">
+        <div class="max-w-3xl mx-auto px-4 space-y-6">
+            <div class="text-center space-y-1">
+                <h2 class="serif-title text-2xl text-slate-900">Забронировать поездку</h2>
+                <p class="text-xs text-slate-500 font-light">Свяжитесь напрямую с нашим менеджером Светланой</p>
             </div>
 
-            <div class="lg:col-span-7 bg-slate-50/80 border border-slate-200/60 p-8 sm:p-10 rounded-[2rem] space-y-6">
-                <h3 class="text-xl font-semibold text-slate-900">Индивидуальные условия поездки</h3>
-                <p class="text-sm text-slate-500 font-light leading-relaxed">
-                    Вы также можете заказать <strong>индивидуальный трансфер</strong> под ключ. В нашем автопарке имеются комфортабельные легковые автомобили, современные минивэны и микроавтобусы. Оплата возможна любым удобным способом (включая переводы от родственников).
-                </p>
-                <div class="p-5 bg-white border border-slate-200 rounded-2xl space-y-3">
-                    <div class="text-xs text-slate-400 uppercase font-semibold tracking-wider">Порядок бронирования мест</div>
-                    <ul class="text-xs text-slate-600 space-y-2 font-light">
-                        <li class="flex items-center space-x-2"><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span> <span>Связываетесь с менеджером Светланой</span></li>
-                        <li class="flex items-center space-x-2"><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span> <span>Уточняете дату поездки и наличие мест</span></li>
-                        <li class="flex items-center space-x-2"><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span> <span>Садитесь в автобус и оплачиваете по факту отправления</span></li>
-                    </ul>
-                </div>
-                <div class="pt-2">
-                    <a href="https://t.me/+79900746647" target="_blank" class="block text-center bg-slate-900 hover:bg-slate-800 text-white font-medium py-4 rounded-xl transition shadow-md">
-                        Быстрое бронирование в Telegram
-                    </a>
-                </div>
+            <div class="bg-slate-50 p-4 rounded-xl text-xs text-slate-600 font-light text-center border border-slate-200/60">
+                Возможен <strong class="font-medium text-slate-900">индивидуальный трансфер</strong>: легковое авто, минивэн или микроавтобус. Родственники могут оплатить вашу поездку переводом на карту.
             </div>
 
+            <div class="space-y-3 max-w-md mx-auto">
+                <a href="tel:+79900332044" class="p-3.5 bg-slate-50 hover:bg-slate-100/80 border border-slate-200/80 rounded-xl flex items-center justify-between transition group">
+                    <div class="flex items-center space-x-3">
+                        <span class="text-slate-400"><i class="fa-solid fa-phone text-sm"></i></span>
+                        <span class="text-xs text-slate-400 font-medium">Звонки по России:</span>
+                    </div>
+                    <span class="text-sm font-semibold text-slate-900 group-hover:text-slate-700">+7 (990) 033-20-44</span>
+                </a>
+
+                <a href="tel:+380894305162" class="p-3.5 bg-slate-50 hover:bg-slate-100/80 border border-slate-200/80 rounded-xl flex items-center justify-between transition group">
+                    <div class="flex items-center space-x-3">
+                        <span class="text-slate-400"><i class="fa-solid fa-phone text-sm"></i></span>
+                        <span class="text-xs text-slate-400 font-medium">Звонки из Украины:</span>
+                    </div>
+                    <span class="text-sm font-semibold text-slate-900 group-hover:text-slate-700">+380 (89) 430-51-62</span>
+                </a>
+
+                <a href="https://t.me/+79900746647" target="_blank" class="p-4 bg-emerald-50 hover:bg-emerald-100/60 border border-emerald-200/60 rounded-xl flex items-center justify-between transition group">
+                    <div class="flex items-center space-x-3">
+                        <span class="text-emerald-600"><i class="fab fa-telegram text-base"></i></span>
+                        <div class="text-left">
+                            <span class="text-xs font-semibold text-emerald-900 block">Написать Светлане</span>
+                            <span class="text-[10px] text-emerald-600 font-light block">Telegram / WhatsApp / Viber</span>
+                        </div>
+                    </div>
+                    <span class="text-xs font-medium text-emerald-900 bg-white px-2.5 py-1 rounded-md border border-emerald-200/40 shadow-sm">+7 (990) 074-66-47</span>
+                </a>
+            </div>
         </div>
-    </nav>
+    </section>
 
-    <footer class="bg-slate-900 text-slate-400 text-xs py-12 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div class="text-center sm:text-left space-y-1">
-                <div class="text-sm font-semibold text-white tracking-wide">ВЕЗДЕ ВЕЗЕМ</div>
-                <div>Пассажирские международные перевозки. С нами всегда везет!</div>
-            </div>
-            <div class="text-center sm:text-right">
-                <div>&copy; 2026 Все права защищены.</div>
-                <div class="text-slate-500 mt-1">Официальный менеджер компании: Светлана</div>
-            </div>
+    <footer class="bg-slate-900 text-slate-500 text-[11px] py-8 border-t border-slate-800 text-center">
+        <div class="max-w-3xl mx-auto px-4 space-y-1">
+            <div class="text-white font-medium text-xs">ВЕЗДЕ ВЕЗЕМ &copy; 2026</div>
+            <div>Международные пассажирские перевозки. С нами всегда везет!</div>
+            <div class="text-slate-600 text-[10px] pt-2">Менеджер компании: Светлана</div>
         </div>
     </footer>
 
